@@ -5,6 +5,10 @@
     .ui.card {
         margin-left: 20px;
     }
+    .card .image {
+      height: 100px;
+      overflow: hidden;
+    }
 </style>
 
 <?
