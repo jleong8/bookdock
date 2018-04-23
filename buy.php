@@ -52,7 +52,7 @@ $output = get($url);
 preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
 //$printhello = print_r($url_matches[1][0]);
 
-echo "<form action=\"buy.php\" method=\"POST\">";
+//echo "<form action=\"buy.php\" method=\"POST\">";
 echo "<div class=\"card\">";
 echo "<div class=\"image\">";
 echo '<img src='.$url_matches[1][1].' />';
@@ -69,15 +69,15 @@ echo "</div>";
 echo "</div>";
 echo "<div class=\"extra content\">";
 echo  "<a>";
-echo "<button class=\"ui green basic button\ type=\"submit\" name=\"button'$i'\">Add to Cart</button>";
+echo "<button class=\"ui green basic button\ type=\"submit\" name=\"button$i\">Add to Cart</button>";
 echo "<i class=\"amazon icon\"></i>";
 echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\">Amazon</a>";
 echo "</a>";
 echo "</div>";
 echo "</div>";
 }
-$i++;
-echo "</form>";
+//$i++;
+//echo "</form>";
 echo "</div>";
 
 
