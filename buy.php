@@ -61,7 +61,6 @@ echo "<div class=\"image\">";
 echo '<img src='.$url_matches[1][1].' />';
 echo  "</div>";
 echo "<div class=\"content\">";
-echo "<input type=\"text\" name=\"booknum\" value=\"$i\" />"
 echo "<a class=\"header\">".$row['title']."</a>";
 echo "<div class=\"meta\">";
 echo "<span class=\"date\">Published: ".$row['year']."</span>";
@@ -73,7 +72,7 @@ echo "</div>";
 echo "</div>";
 echo "<div class=\"extra content\">";
 echo  "<a>";
-echo "<button class=\"ui green basic button\ type=\"submit\" name=\"button\">Add to Cart</button>";
+echo "<button class=\"ui green basic button\ type=\"submit\" name=\"button$i\">Add to Cart</button>";
 //echo "";
 echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\"><i class=\"amazon icon\"></i></a>";
 echo "</a>";
