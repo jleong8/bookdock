@@ -32,7 +32,7 @@ function get($url) {
 }
 
 preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
-$print = print_r($url_matches[1][0]);
+//$print = print_r($url_matches[1][0]);
 
 echo "<div class=\"ui four cards\">";
 foreach($result as $row) {
@@ -43,7 +43,7 @@ $output = get($url);
 
 echo "<div class=\"card\">";
 echo "<div class=\"image\">";
-echo "<img src=\"$print\">";
+echo "<img src=\"print_r($url_matches[1][0])\">";
 echo  "</div>";
 echo "<div class=\"content\">";
 echo "<a class=\"header\">".$row['title']."</a>";
