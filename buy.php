@@ -18,7 +18,7 @@
 
 <?
 
-$keyword = $row['title'];
+$keyword = 'nature';
 $url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."&qs=n&form=QBIR&sp=-1&pq=".str_replace(" ", "+", $keyword)."&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
 $output = get($url);
 // echo $output;
