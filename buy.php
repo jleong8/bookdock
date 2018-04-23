@@ -41,6 +41,7 @@ function get($url) {
 
 
 echo "<div class=\"ui four cards\">";
+$i = 1;
 foreach($result as $row) {
 
 $keyword = $row['title'] . " " . "book cover";
