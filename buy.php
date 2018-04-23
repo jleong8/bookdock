@@ -11,6 +11,9 @@
       max-height: 100%;
       overflow: hidden;
     }
+    .amazon.icon {
+      float: right;
+    }
 </style>
 
 <?
@@ -70,8 +73,8 @@ echo "</div>";
 echo "<div class=\"extra content\">";
 echo  "<a>";
 echo "<button class=\"ui green basic button\ type=\"submit\" name=\"button$i\">Add to Cart</button>";
-echo "<i class=\"amazon icon\"></i>";
-echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\">Amazon</a>";
+echo "<i class=\"amazon icon\"><a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\">Amazon</a></i>";
+//echo "";
 echo "</a>";
 echo "</div>";
 $i++;
