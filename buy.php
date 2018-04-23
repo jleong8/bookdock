@@ -67,6 +67,7 @@ echo "</div>";
 echo "</div>";
 echo "<div class=\"extra content\">";
 echo  "<a>";
+echo "<button class="ui green basic button">Add to Cart</button>";
 echo "<i class=\"amazon icon\"></i>";
 echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\">Amazon</a>";
 echo "</a>";
