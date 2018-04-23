@@ -41,7 +41,8 @@ function get($url) {
 
 
 echo "<div class=\"ui four cards\">";
-$i = 1;
+$i = 1
+echo "<form action=\"buy.php\" method=\"POST\">";
 foreach($result as $row) {
 
 $keyword = $row['title'] . " " . "book cover";
@@ -52,7 +53,6 @@ $output = get($url);
 preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
 //$printhello = print_r($url_matches[1][0]);
 
-//echo "<form action=\"buy.php\" method=\"POST\">";
 echo "<div class=\"card\">";
 echo "<div class=\"image\">";
 echo '<img src='.$url_matches[1][1].' />';
@@ -75,9 +75,9 @@ echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords="
 echo "</a>";
 echo "</div>";
 echo "</div>";
+$i++;
 }
-//$i++;
-//echo "</form>";
+echo "</form>";
 echo "</div>";
 
 
