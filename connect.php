@@ -7,10 +7,10 @@
  
 <?php
 
-    $servername = "localhost";
-    $username = "jleong8_jleong88";
-    $password = "22331387";
-    $dbname = "jleong8_bookdock";
+    $servername = "us-cdbr-iron-east-05.cleardb.net";
+    $username = "b8f0d04ab35a31";
+    $password = "f80e0f51";
+    $dbname = "heroku_813ab07d7ae2164";
     
      try {
         $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
