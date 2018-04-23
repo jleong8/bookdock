@@ -43,7 +43,7 @@ function get($url) {
 echo "<div class=\"ui four cards\">";
 foreach($result as $row) {
 
-$keyword = $row['title'] . " " . "book";
+$keyword = $row['title'] . " " . "book cover";
 //echo $keyword;
 $url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."&qs=n&form=QBIR&sp=-1&pq=".str_replace(" ", "+", $keyword)."&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
 //$url = "https://www.bing.com/images/search?sp=".str_replace(" ", "+", $keyword)."&sk=&cvid=72403DB04166491AB1CE84BB0995918D&q=".str_replace(" ", "+", $keyword)."&qft=+filterui:imagesize-medium&FORM=IRFLTR";
@@ -53,7 +53,7 @@ preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_
 
 echo "<div class=\"card\">";
 echo "<div class=\"image\">";
-echo '<img src='.$url_matches[0][0].' />';
+echo '<img src='.$url_matches[1][0].' />';
 echo  "</div>";
 echo "<div class=\"content\">";
 echo "<a class=\"header\">".$row['title']."</a>";
