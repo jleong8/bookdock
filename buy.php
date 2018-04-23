@@ -53,7 +53,7 @@ preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_
 
 echo "<div class=\"card\">";
 echo "<div class=\"image\">";
-echo '<img src='.$url_matches[1][0].' />';
+echo '<img src='.$url_matches[0][0].' />';
 echo  "</div>";
 echo "<div class=\"content\">";
 echo "<a class=\"header\">".$row['title']."</a>";
