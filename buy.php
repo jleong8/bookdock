@@ -40,8 +40,8 @@ function get($url) {
 
 
 echo "<form action=\"buy.php\" method=\"POST\">";
+$i = 1;
 echo "<div class=\"ui four cards\">";
-$i = 1
 foreach($result as $row) {
 
 $keyword = $row['title'] . " " . "book cover";
@@ -51,6 +51,7 @@ $url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."
 $output = get($url);
 preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
 //$printhello = print_r($url_matches[1][0]);
+
 
 echo "<div class=\"card\">";
 echo "<div class=\"image\">";
@@ -78,5 +79,4 @@ echo "</div>";
 }
 echo "</div>";
 echo "</form>";
-
 ?>
