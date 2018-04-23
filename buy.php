@@ -19,14 +19,17 @@
 <?
 
 $keyword = $row['title'];
-$url = "https://www.bing.com/images/search?q=$keyword&qs=n&form=QBIR&sp=-1&pq=$keyword&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
-$curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-$output = curl_exec($curl);
-curl_close($curl);
-echo $output;
+$url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."&qs=n&form=QBIR&sp=-1&pq=".str_replace(" ", "+", $keyword)."&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
+$output = get($url);
 
+function get($url) {
+  $curl = curl_init();
+  curl_setopt($curl, CURLOPT_URL, $url);
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  $output = curl_exec($curl);
+  curl_close($curl);
+  return $output;
+}
 // echo "<div class=\"ui four cards\">";
 // foreach($result as $row) {
 // echo "<div class=\"card\">";
