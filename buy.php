@@ -32,8 +32,8 @@ function get($url) {
 }
 
 preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
-$print = print_r($url_matches[1][0]);
-echo $print;
+echo print_r($url_matches[1][0]);
+
 
 echo "<div class=\"ui four cards\">";
 foreach($result as $row) {
