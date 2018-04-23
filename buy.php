@@ -43,6 +43,7 @@ foreach($result as $row) {
 
 $keyword = $row['title'];
 //$url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."&qs=n&form=QBIR&sp=-1&pq=".str_replace(" ", "+", $keyword)."&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
+//$url = "https://www.google.com/search?hl=en&authuser=0&tbm=isch&source=hp&biw=1536&bih=772&ei=_JHdWtTTLNa4jAO-srm4Cg&q=".str_replace(" ", "+", $keyword)."&oq=".str_replace(" ", "+", $keyword)."&gs_l=img.3..35i39k1j0l9.1277.5734.0.5806.36.25.0.0.0.0.283.3127.0j13j5.18.0....0...1ac.1.64.img..18.18.3107.0...0.DEweWkcsBO8";
 $url = "https://www.bing.com/images/search?sp=".str_replace(" ", "+", $keyword)."&sk=&cvid=72403DB04166491AB1CE84BB0995918D&q=".str_replace(" ", "+", $keyword)."&qft=+filterui:imagesize-medium&FORM=IRFLTR";
 $output = get($url);
 preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
