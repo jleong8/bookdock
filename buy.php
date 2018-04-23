@@ -6,7 +6,7 @@
         margin-left: 20px;
     }
     .card .image {
-      height: 300px;
+      height: 500px;
       overflow: hidden;
     }
 </style>
