@@ -6,7 +6,7 @@
         margin-left: 20px;
     }
     .card .image {
-      /**height: 500px;**/
+      height: 500px;
       max-width: 100%;
       max-height: 100%;
       overflow: hidden;
