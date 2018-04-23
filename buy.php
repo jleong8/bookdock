@@ -29,7 +29,7 @@
 
 if(isset($_POST['purchaseButton'])) {
   $itemNum = $_POST['itemNum'];
-  alert($itemNum);
+  
 }
 ?>
 <?
