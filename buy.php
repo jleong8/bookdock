@@ -29,6 +29,7 @@
 
 if(isset($_POST['purchaseButton'])) {
   $itemNum = $_POST['itemNum'];
+  echo $itemNum;
 
 }
 ?>
@@ -79,7 +80,7 @@ echo "</div>";
 echo "</div>";
 echo "<div class=\"extra content\">";
 echo  "<a>";
-echo "<input type=\"text\" name=\"itemNum\" value=\"$i\">";
+echo "<input type=\"hidden\" name=\"itemNum\" value=\"$i\">";
 //echo "<button class=\"ui green basic button\ type=\"submit\" name=\"purchaseButton\">Add to Cart</button>";
 echo "<button class=\"ui green basic button\ type=\"submit\" name=\"purchaseButton\">Add to Cart</button>";
 //echo "";
