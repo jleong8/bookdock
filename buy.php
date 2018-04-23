@@ -45,7 +45,7 @@ $print = print_r($url_matches[1][0]);
 
 echo "<div class=\"card\">";
 echo "<div class=\"image\">";
-echo "<img src=\"\">";
+echo '<img src='.$print.' />';
 echo  "</div>";
 echo "<div class=\"content\">";
 echo "<a class=\"header\">".$row['title']."</a>";
