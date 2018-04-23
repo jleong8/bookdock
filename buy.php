@@ -24,7 +24,7 @@ echo "<div class=\"ui four cards\">";
 foreach($result as $row) {
 echo "<div class=\"card\">";
 echo "<div class=\"image\">";
-echo "<img src=\"images/matthew.png\">";
+echo "<img src=\"https://vignette.wikia.nocookie.net/harrypotter/images/2/2c/Goblet_of_Fire_Film_Poster.jpg/revision/latest?cb=20140817011104\">";
 echo  "</div>";
 echo "<div class=\"content\">";
 echo "<a class=\"header\">".$row['title']."</a>";
