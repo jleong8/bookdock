@@ -39,10 +39,9 @@ function get($url) {
 
 
 
-
+echo "<form action=\"buy.php\" method=\"POST\">";
 echo "<div class=\"ui four cards\">";
 $i = 1
-echo "<form action=\"buy.php\" method=\"POST\">";
 foreach($result as $row) {
 
 $keyword = $row['title'] . " " . "book cover";
@@ -74,11 +73,10 @@ echo "<i class=\"amazon icon\"></i>";
 echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\">Amazon</a>";
 echo "</a>";
 echo "</div>";
-echo "</div>";
 $i++;
-}
-echo "</form>";
 echo "</div>";
-
+}
+echo "</div>";
+echo "</form>";
 
 ?>
