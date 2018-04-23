@@ -31,7 +31,8 @@ function get($url) {
   return $output;
 }
 
-
+preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
+$print = print_r($url_matches[1][0]);
 
 echo "<div class=\"ui four cards\">";
 foreach($result as $row) {
@@ -40,12 +41,9 @@ $keyword = $row['title'];
 $url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."&qs=n&form=QBIR&sp=-1&pq=".str_replace(" ", "+", $keyword)."&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
 $output = get($url);
 
-preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
-//$print = print_r($url_matches[1][0]);
-
 echo "<div class=\"card\">";
 echo "<div class=\"image\">";
-echo "<img src=\"print_r($url_matches[1][0])"">";
+echo "<img src=\"$print\">";
 echo  "</div>";
 echo "<div class=\"content\">";
 echo "<a class=\"header\">".$row['title']."</a>";
