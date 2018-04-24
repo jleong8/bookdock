@@ -73,7 +73,7 @@ function get($url) {
 
 ?>
 
-<div class="ui three cards">
+<div class="ui four cards">
 <?
 foreach($result as $row) {
 ?>
@@ -88,7 +88,7 @@ foreach($result as $row) {
   preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
   ?>
 
-  <div class="ui card">
+  <div class="card">
   <div class="image">
   <img src=<? echo $url_matches[1][1]; ?>>
   </div>
@@ -99,10 +99,10 @@ foreach($result as $row) {
   </div>
   <div class="description">
   Author: <? echo $row['author']; ?>
+  <p style= text-align:"center" font-size="3">Price: $<? echo $row['price']; ?></p>
   </div>
   </div>
   <div class="extra content">
-  <p style= text-align:"center" font-color="black" font-size="3">$<? echo $row['price']; ?></p>
   <input type="hidden" name="hidden_title" value=<? echo $row['title']; ?>>
   <input type="hidden" name="hidden_price" value=<? echo $row['price'];?>>
   <input type="submit" name="add_to_cart" value="Add to Cart">
