@@ -19,7 +19,10 @@
 <?
 
 $book_id = $_GET["id"];
-echo $book_id;
+if(isset($book_id)) {
+  echo $book_id;
+}
+//echo $book_id;
       // break;
 
 
