@@ -72,11 +72,11 @@ function get($url) {
 
 
 
-
+echo "<div class=\"ui four cards\">";
 foreach($result as $row) {
 
 echo "<form action=\"buy.php?action=add&id=".$row['book_id']."\" method=\"POST\">";
-echo "<div class=\"ui four cards\">";
+
 $keyword = $row['title'] . " " . "book cover";
 //echo $keyword;
 $url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."&qs=n&form=QBIR&sp=-1&pq=".str_replace(" ", "+", $keyword)."&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
@@ -109,9 +109,9 @@ echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords="
 
 echo "</div>";
 echo "</div>";
-echo "</div>";
+
 echo "</form>";
 }
-
+echo "</div>";
 
 ?>
