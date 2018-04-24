@@ -71,11 +71,12 @@ function get($url) {
 
 
 
-echo "<form action=\"buy.php?action=add&id=".$row['book_id']."\" method=\"POST\">";
-$i = 1;
+
+
 echo "<div class=\"ui four cards\">";
 foreach($result as $row) {
-
+echo "<form action=\"buy.php?action=add&id=".$row['book_id']."\" method=\"POST\">";
+$i = 1;
 $keyword = $row['title'] . " " . "book cover";
 //echo $keyword;
 $url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."&qs=n&form=QBIR&sp=-1&pq=".str_replace(" ", "+", $keyword)."&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
@@ -101,8 +102,6 @@ echo "<p style=text-align:\"center\" font-size=\"3\">$".$row['price']."</p>";
 echo "</div>";
 echo "</div>";
 echo "<div class=\"extra content\">";
-echo "<input type=\"hidden\" name=\"hidden_title\" value=".$row['title'].">";
-echo "<input type=\"hidden\" name=\"hidden_price\" value=".$row['price'].">";
 echo "<input type=\"submit\" name=\"add_to_cart\" value=\"Add to Cart\">";
 echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\"><i class=\"amazon icon\"></i></a>";
 
