@@ -108,8 +108,8 @@ echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords="
 
 echo "</div>";
 echo "</div>";
-}
 echo "</form>";
+}
 echo "</div>";
 
 ?>
