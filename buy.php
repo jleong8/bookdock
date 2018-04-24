@@ -45,19 +45,17 @@ if(isset($_POST["add_to_cart"])) {
     }
 }
 ?>
-<?
 
-    $sql = "SELECT * FROM `books`";
-    $sel = $pdo->prepare($sql);
-    $sel->execute();
-    $result = $sel->fetchAll();
-    while ($row = $sel->fetch(PDO::FETCH_ASSOC)) {
-      $book_id = $row['book_id'];
-    }
-?>
 
 <?
 
+$sql = "SELECT * FROM `books`";
+$sel = $pdo->prepare($sql);
+$sel->execute();
+$result = $sel->fetchAll();
+while ($row = $sel->fetch(PDO::FETCH_ASSOC)) {
+  $book_id = $row['book_id'];
+}
 
 
 // echo $output;
@@ -74,7 +72,7 @@ function get($url) {
 
 
 echo "<form action=\"buy.php?action=add&id=".$book_id."\" method=\"POST\">";
-$i = 1;
+
 echo "<div class=\"ui four cards\">";
 foreach($result as $row) {
 
@@ -109,7 +107,7 @@ echo "<input type=\"submit\" name=\"add_to_cart\" value=\"Add to Cart\">";
 echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\"><i class=\"amazon icon\"></i></a>";
 
 echo "</div>";
-$i++;
+
 echo "</div>";
 }
 echo "</div>";
