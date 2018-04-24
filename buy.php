@@ -6,7 +6,7 @@
         margin-left: 20px;
     }
     .card .image {
-      height: 500px;
+      height: 400px;
       max-width: 100%;
       max-height: 100%;
       overflow: hidden;
@@ -99,10 +99,10 @@ foreach($result as $row) {
   </div>
   <div class="description">
   Author: <? echo $row['author']; ?>
-  <p style= text-align:"center" font-size="3">$<? echo $row['price']; ?></p>
   </div>
   </div>
   <div class="extra content">
+  <p style= text-align:"center" font-color="black" font-size="3">$<? echo $row['price']; ?></p>
   <input type="hidden" name="hidden_title" value=<? echo $row['title']; ?>>
   <input type="hidden" name="hidden_price" value=<? echo $row['price'];?>>
   <input type="submit" name="add_to_cart" value="Add to Cart">
