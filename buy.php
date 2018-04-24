@@ -27,14 +27,6 @@
 
 <?
 
-if(isset($_POST['purchaseButton'])) {
-  $itemNum = $_POST['itemNum'];
-  echo $itemNum;
-
-}
-?>
-<?
-
 
 
 // echo $output;
@@ -50,7 +42,7 @@ function get($url) {
 
 
 
-echo "<form action=\"buy.php\" method=\"POST\">";
+echo "<form action=\"buy.php?action=add&id=".$row['book_id']."\" method=\"POST\">";
 $i = 1;
 echo "<div class=\"ui four cards\">";
 foreach($result as $row) {
@@ -79,13 +71,10 @@ echo $row['author'];
 echo "</div>";
 echo "</div>";
 echo "<div class=\"extra content\">";
-echo  "<a>";
-echo "<input type=\"hidden\" name=\"itemNum\" value=\"$i\">";
-//echo "<button class=\"ui green basic button\ type=\"submit\" name=\"purchaseButton\">Add to Cart</button>";
-echo "<button class=\"ui green basic button\ type=\"submit\" name=\"purchaseButton\">Add to Cart</button>";
-//echo "";
+
+echo "<input type=\"submit\" name=\"add_to_cart\" value=\"Add to Cart\">";
 echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\"><i class=\"amazon icon\"></i></a>";
-echo "</a>";
+
 echo "</div>";
 $i++;
 echo "</div>";
