@@ -111,6 +111,8 @@ foreach($result as $row) {
 
   </form>
   }
-</div>
 
+<?
+}
+echo "</div>";
 ?>
