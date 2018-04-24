@@ -18,44 +18,44 @@
 
 <?
 
-session_start();
-
-if(isset($_POST["add_to_cart"])) {
-    if(isset($_SESSION["shopping_cart"])) {
-        $item_array_id = array_column($_SESSION["shopping_cart"], "book_id");
-        if(!in_array($_GET["book_id"], $item_array_id)) {
-            $count = count($_SESSION["shopping_cart"]);
-            $item_array = array(
-                'book_id' => $_GET["book_id"],
-                'item_title' => $_POST["hidden_title"],
-                'item_price' => $_POST["hidden_price"]
-            );
-            $_SESSION["shopping_cart"][$count] = $item_array;
-
-        }
-    }
-    else {
-        $item_array = array (
-            'book_id' => $_GET["book_id"],
-            'item_title' => $_POST["hidden_title"],
-            'item_price' => $_POST["hidden_price"]
-            );
-
-        $_SESSION["shopping_cart"][0] = $item_array;
-    }
-}
+// session_start();
+//
+// if(isset($_POST["add_to_cart"])) {
+//     if(isset($_SESSION["shopping_cart"])) {
+//         $item_array_id = array_column($_SESSION["shopping_cart"], "book_id");
+//         if(!in_array($_GET["book_id"], $item_array_id)) {
+//             $count = count($_SESSION["shopping_cart"]);
+//             $item_array = array(
+//                 'book_id' => $_GET["book_id"],
+//                 'item_title' => $_POST["hidden_title"],
+//                 'item_price' => $_POST["hidden_price"]
+//             );
+//             $_SESSION["shopping_cart"][$count] = $item_array;
+//
+//         }
+//     }
+//     else {
+//         $item_array = array (
+//             'book_id' => $_GET["book_id"],
+//             'item_title' => $_POST["hidden_title"],
+//             'item_price' => $_POST["hidden_price"]
+//             );
+//
+//         $_SESSION["shopping_cart"][0] = $item_array;
+//     }
+// }
 ?>
+<?
 
+    $sql = "SELECT * FROM `books`";
+    $sel = $pdo->prepare($sql);
+    $sel->execute();
+    $result = $sel->fetchAll();
+
+?>
 
 <?
 
-$sql = "SELECT * FROM `books`";
-$sel = $pdo->prepare($sql);
-$sel->execute();
-$result = $sel->fetchAll();
-while ($row = $sel->fetch(PDO::FETCH_ASSOC)) {
-  $book_id = $row['book_id'];
-}
 
 
 // echo $output;
@@ -71,11 +71,11 @@ function get($url) {
 
 
 
-echo "<form action=\"buy.php?action=add&id=".$book_id."\" method=\"POST\">";
 
-echo "<div class=\"ui four cards\">";
+
 foreach($result as $row) {
-
+echo "<div class=\"ui four cards\">";
+echo "<form action=\"buy.php?action=add&id=".$row['book_id']."\" method=\"POST\">";
 $keyword = $row['title'] . " " . "book cover";
 //echo $keyword;
 $url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."&qs=n&form=QBIR&sp=-1&pq=".str_replace(" ", "+", $keyword)."&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
@@ -107,7 +107,6 @@ echo "<input type=\"submit\" name=\"add_to_cart\" value=\"Add to Cart\">";
 echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\"><i class=\"amazon icon\"></i></a>";
 
 echo "</div>";
-
 echo "</div>";
 }
 echo "</div>";
