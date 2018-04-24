@@ -51,9 +51,9 @@ if(isset($_POST["add_to_cart"])) {
     $sel = $pdo->prepare($sql);
     $sel->execute();
     $result = $sel->fetchAll();
-    // while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-    //   $book_id = $row['book_id'];
-    // }
+    while ($row = $sel->fetch(PDO::FETCH_ASSOC)) {
+      $book_id = $row['book_id'];
+    }
 ?>
 
 <?
@@ -103,6 +103,8 @@ echo "<p style=text-align:\"center\" font-size=\"3\">$".$row['price']."</p>";
 echo "</div>";
 echo "</div>";
 echo "<div class=\"extra content\">";
+echo "<input type=\"hidden\" name=\"hidden_title\" value=".$row['title'].">";
+echo "<input type=\"hidden\" name=\"hidden_price\" value=".$row['price'].">";
 echo "<input type=\"submit\" name=\"add_to_cart\" value=\"Add to Cart\">";
 echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\"><i class=\"amazon icon\"></i></a>";
 
