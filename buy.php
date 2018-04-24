@@ -5,10 +5,8 @@
     .ui.card {
         margin-left: 20px;
     }
-    .card .image {
+    .card.image {
       height: 500px;
-      max-width: 100%;
-      max-height: 100%;
       overflow: hidden;
     }
     .amazon.icon {
