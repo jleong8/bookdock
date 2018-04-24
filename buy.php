@@ -20,6 +20,7 @@
 
 $book_id = $_GET["id"];
 if(isset($book_id)) {
+  //$sql = "SELECT * FROM `books`";
   echo $book_id;
 }
 
