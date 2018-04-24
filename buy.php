@@ -51,9 +51,9 @@ if(isset($_POST["add_to_cart"])) {
     $sel = $pdo->prepare($sql);
     $sel->execute();
     $result = $sel->fetchAll();
-    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-      $book_id = $row['book_id'];
-    }
+    // while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    //   $book_id = $row['book_id'];
+    // }
 ?>
 
 <?
