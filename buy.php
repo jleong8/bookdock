@@ -18,11 +18,8 @@
 
 <?
 
-if(!empty($_GET["action"])) {
-  switch($_GET["action"]) {
-    case "add":
-      $book_id = $_GET["id"];
-      alert($book_id);
+$book_id = $_GET["id"];
+echo $book_id;
       // break;
   }
 }
