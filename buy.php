@@ -72,46 +72,45 @@ function get($url) {
 
 
 
-echo "<div class=\"ui four cards\">";
+<div class="ui four cards">
 foreach($result as $row) {
+?>
+<form action="buy.php?action=add&id=".$row['book_id']."" method="POST">;
 
-echo "<form action=\"buy.php?action=add&id=".$row['book_id']."\" method=\"POST\">";
+  <?php
+  $keyword = $row['title'] . " " . "book cover";
+  //echo $keyword;
+  $url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."&qs=n&form=QBIR&sp=-1&pq=".str_replace(" ", "+", $keyword)."&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
+  //$url = "https://www.bing.com/images/search?sp=".str_replace(" ", "+", $keyword)."&sk=&cvid=72403DB04166491AB1CE84BB0995918D&q=".str_replace(" ", "+", $keyword)."&qft=+filterui:imagesize-medium&FORM=IRFLTR";
+  $output = get($url);
+  preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
+  ?>
 
-$keyword = $row['title'] . " " . "book cover";
-//echo $keyword;
-$url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."&qs=n&form=QBIR&sp=-1&pq=".str_replace(" ", "+", $keyword)."&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
-//$url = "https://www.bing.com/images/search?sp=".str_replace(" ", "+", $keyword)."&sk=&cvid=72403DB04166491AB1CE84BB0995918D&q=".str_replace(" ", "+", $keyword)."&qft=+filterui:imagesize-medium&FORM=IRFLTR";
-$output = get($url);
-preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
-//$printhello = print_r($url_matches[1][0]);
+  <div class="card">
+  <div class="image">
+  <img src=<? echo $url_matches[1][1]; ?> />
+  </div>
+  <div class="content">
+  <a class="header"><? echo $row['title']; ?></a>
+  <div class="meta">
+  <span class="date">Published: <? echo $row['year']; ?></span>
+  </div>
+  <div class="description">
+  Author: <? echo $row['author']; ?>
+  <p style=text-align:"center" font-size="3">$<? echo $row['price'] ?></p>";
+  </div>
+  </div>
+  <div class="extra content">
+  <input type="hidden" name="hidden_title" value="<? echo $row['title'] ?>">
+  <input type="hidden" name="hidden_price" value="<? echo $row['price'] ?>">
+  <input type="submit" name="add_to_cart" value="Add to Cart">
+  <a href="http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=<? echo $row['title'] ?>&Go=Go"><i class="amazon icon"></i></a>
 
+  </div>
+  </div>
 
-echo "<div class=\"card\">";
-echo "<div class=\"image\">";
-echo '<img src='.$url_matches[1][1].' />';
-echo  "</div>";
-echo "<div class=\"content\">";
-echo "<a class=\"header\">".$row['title']."</a>";
-echo "<div class=\"meta\">";
-echo "<span class=\"date\">Published: ".$row['year']."</span>";
-echo "</div>";
-echo "<div class=\"description\">";
-echo "Author:   ";
-echo $row['author'];
-echo "<p style=text-align:\"center\" font-size=\"3\">$".$row['price']."</p>";
-echo "</div>";
-echo "</div>";
-echo "<div class=\"extra content\">";
-echo "<input type=\"hidden\" name=\"hidden_title\" value=".$row['title'].">";
-echo "<input type=\"hidden\" name=\"hidden_price\" value=".$row['price'].">";
-echo "<input type=\"submit\" name=\"add_to_cart\" value=\"Add to Cart\">";
-echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=".$row['title']."&Go=Go\"><i class=\"amazon icon\"></i></a>";
-
-echo "</div>";
-echo "</div>";
-
-echo "</form>";
-}
-echo "</div>";
+  </form>
+  }
+</div>
 
 ?>
