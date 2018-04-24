@@ -72,9 +72,9 @@ function get($url) {
 
 
 
-
-foreach($result as $row) {
 echo "<div class=\"ui four cards\">";
+foreach($result as $row) {
+
 echo "<form action=\"buy.php?action=add&id=".$row['book_id']."\" method=\"POST\">";
 $keyword = $row['title'] . " " . "book cover";
 //echo $keyword;
@@ -109,6 +109,7 @@ echo "<a href=\"http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords="
 echo "</div>";
 echo "</div>";
 }
-echo "</div>";
 echo "</form>";
+echo "</div>";
+
 ?>
