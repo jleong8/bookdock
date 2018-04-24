@@ -72,7 +72,7 @@ function get($url) {
 
 
 
-echo "<div class=\"ui container\">";
+
 echo "<div class=\"ui four doubling stackable cards\">";
 foreach($result as $row) {
 ?>
@@ -115,6 +115,5 @@ foreach($result as $row) {
 
 <?
 }
-echo "</div>";
 echo "</div>";
 ?>
