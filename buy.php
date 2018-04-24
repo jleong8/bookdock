@@ -88,7 +88,7 @@ foreach($result as $row) {
 
   <div class="card">
   <div class="image">
-  <img src=<? echo $url_matches[1][1]; ?> />
+  <img src=<? echo $url_matches[1][1]; ?>>
   </div>
   <div class="content">
   <a class="header"><? echo $row['title']; ?></a>
@@ -97,12 +97,12 @@ foreach($result as $row) {
   </div>
   <div class="description">
   Author: <? echo $row['author']; ?>
-  <p style=text-align:"center" font-size="3">$<? echo $row['price'] ?></p>";
+  <p style= text-align:"center" font-size="3">$<? echo $row['price']; ?></p>
   </div>
   </div>
   <div class="extra content">
-  <input type="hidden" name="hidden_title" value="<? echo $row['title'] ?>">
-  <input type="hidden" name="hidden_price" value="<? echo $row['price'] ?>">
+  <input type="hidden" name="hidden_title" value=<? echo $row['title']; ?>>
+  <input type="hidden" name="hidden_price" value=<? echo $row['price'];?>>
   <input type="submit" name="add_to_cart" value="Add to Cart">
   <a href="http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=<? echo $row['title'] ?>&Go=Go"><i class="amazon icon"></i></a>
 
