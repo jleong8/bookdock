@@ -5,8 +5,10 @@
     .ui.card {
         margin-left: 20px;
     }
-    .card.image {
+    .card .image {
       height: 500px;
+      max-width: 100%;
+      max-height: 100%;
       overflow: hidden;
     }
     .amazon.icon {
@@ -71,7 +73,7 @@ function get($url) {
 
 
 
-echo "<div class=\"ui four doubling stackable cards\">";
+echo "<div class=\"ui four stackable cards\">";
 foreach($result as $row) {
 ?>
 <form action="buy.php?action=add&id=<? echo $row['book_id']?>" method="POST">
