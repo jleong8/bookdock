@@ -51,7 +51,9 @@ if(isset($_POST["add_to_cart"])) {
     $sel = $pdo->prepare($sql);
     $sel->execute();
     $result = $sel->fetchAll();
-
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+      $book_id = $row['book_id'];
+    }
 ?>
 
 <?
@@ -71,12 +73,11 @@ function get($url) {
 
 
 
-
-
+echo "<form action=\"buy.php?action=add&id=".$book_id."\" method=\"POST\">";
+$i = 1;
 echo "<div class=\"ui four cards\">";
 foreach($result as $row) {
-echo "<form action=\"buy.php?action=add&id=".$row['book_id']."\" method=\"POST\">";
-$i = 1;
+
 $keyword = $row['title'] . " " . "book cover";
 //echo $keyword;
 $url = "https://www.bing.com/images/search?q=".str_replace(" ", "+", $keyword)."&qs=n&form=QBIR&sp=-1&pq=".str_replace(" ", "+", $keyword)."&sc=8-34&sk=&cvid=0FB8E004AC034F21A51B1D59172B56A5";
