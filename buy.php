@@ -75,7 +75,7 @@ function get($url) {
 echo "<div class=\"ui four cards\">";
 foreach($result as $row) {
 ?>
-<form action="buy.php?action=add&id=".$row['book_id']."" method="POST">
+<form action="buy.php?action=add&id=<? echo $row['book_id']?>" method="POST">
 
   <?php
   $keyword = $row['title'] . " " . "book cover";
