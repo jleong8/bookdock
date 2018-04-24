@@ -16,12 +16,13 @@ if(isset($_POST['submit'])) {
     $title = $_POST['title'];
     $author = $_POST['author'];
     $year = $_POST['year'];
-    
-    $sql = "INSERT INTO `books` (`title`, `author`, `year`) VALUES ('".$_POST['title']."','".$_POST['author']."','".$_POST['year']."')";
-    
+    $uniq = substr(uniqid(),0,6);
+
+    $sql = "INSERT INTO `books` (`title`, `author`, `year`, `book_id`) VALUES ('".$_POST['title']."','".$_POST['author']."','".$_POST['year']."', '".$uniq."')";
+
     $sel = $pdo->prepare($sql);
     $sel->execute();
-  
+
 }
 
 ?>
