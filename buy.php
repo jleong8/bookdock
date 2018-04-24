@@ -88,7 +88,7 @@ foreach($result as $row) {
   preg_match_all('!<a class="thumb" target="_blank" href="(.*?)"!', $output, $url_matches);
   ?>
 
-  <div class="ui cards">
+  <div class="ui card">
   <div class="image">
   <img src=<? echo $url_matches[1][1]; ?>>
   </div>
