@@ -22,8 +22,7 @@ $book_id = $_GET["id"];
 if(isset($book_id)) {
   echo $book_id;
 }
-//echo $book_id;
-      // break;
+
 
 
 
