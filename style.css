@@ -76,21 +76,6 @@
     background: linear-gradient(red, yellow); /* Standard syntax */
 }
 
-body{
-	margin:0;
-	padding:0;
-	font-family:"arial",heletica,sans-serif;
-	font-size:12px;
-      /* color: white; */
-
-	-webkit-animation: 10s linear 0s normal none infinite animate;
-	-moz-animation: 10s linear 0s normal none infinite animate;
-	-ms-animation: 10s linear 0s normal none infinite animate;
-	-o-animation: 10s linear 0s normal none infinite animate;
-	animation: 10s linear 0s normal none infinite animate;
-
-}
-
 #gradient
 {
       width: 100%;
