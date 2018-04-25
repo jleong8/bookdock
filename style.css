@@ -81,7 +81,7 @@ body{
 	padding:0;
 	font-family:"arial",heletica,sans-serif;
 	font-size:12px;
-      color: white;
+      /* color: white; */
 
 	-webkit-animation: 10s linear 0s normal none infinite animate;
 	-moz-animation: 10s linear 0s normal none infinite animate;
