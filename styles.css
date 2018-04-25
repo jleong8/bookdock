@@ -76,6 +76,13 @@
     background: linear-gradient(red, yellow); /* Standard syntax */
 }
 
+body{
+	margin:0;
+	padding:0;
+	font-family:"arial",heletica,sans-serif;
+	font-size:12px;
+}
+
 #gradient
 {
       width: 100%;
