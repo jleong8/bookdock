@@ -8,7 +8,8 @@
         margin-top: 40px;
     }
     .ui.column.centered.grid {
-      margin-top: 20px;
+      text-align: left;
+      margin-top: 50px;
     }
 </style>
 <?php
