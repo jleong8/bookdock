@@ -1,21 +1,25 @@
 <?php include 'header.php'; ?>
 
+<style>
+    h1 {
+        margin-left: 20px;
+    }
+    br {
+        line-height: 1000%;
+    }
+</style>
 
 <div class="ui column centered grid">
-<form class="ui form" action="sell.php" method="POST">
-  <div class="field">
-    <label>Title</label>
-    <input type="text" name="title" placeholder="Title">
-  </div>
-  <div class="field">
-    <label>Author</label>
-    <input type="text" name="author" placeholder="Author">
-  </div>
-    <div class="field">
-    <label>Year</label>
-    <input type="text" name="year" placeholder="Year">
-  </div>
+<h1>Dashboard</h1>
+<hr style="height:5px;border:none;color:#333;background-color:#333;" />
+<h1>Wishlist</h1>
+<br>
+<hr style="height:5px;border:none;color:#333;background-color:#333;" />
+<h1>Sold books</h1>
+<br>
+<hr style="height:5px;border:none;color:#333;background-color:#333;" />
+<h1>Messages</h1>
+<br>
+<hr style="height:5px;border:none;color:#333;background-color:#333;" />
 
-  <button class="ui button" name="submit" id="submit" type="submit">Submit</button>
-</form>
 </div>
