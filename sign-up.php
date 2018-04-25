@@ -7,6 +7,9 @@
     .thumbnail.text-center {
         margin-top: 40px;
     }
+    .ui.column.centered.grid {
+      margin-top: 20px;
+    }
 </style>
 <?php
 
