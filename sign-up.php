@@ -15,11 +15,11 @@
 <?php
 
 if(isset($_POST['submit'])) {
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
     $name = $_POST['name'];
 
-    $sql = "INSERT INTO `login` (`username`, `password`, `name`) VALUES ('".$_POST['username']."','".$_POST['password']."','".$_POST['name']."')";
+    $sql = "INSERT INTO `login` (`username`, `password`, `name`) VALUES ('".$_POST['email']."','".$_POST['password']."','".$_POST['name']."')";
 
     $sel = $pdo->prepare($sql);
     $sel->execute();

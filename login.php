@@ -13,9 +13,9 @@
 if(isset($_POST['Submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    
+
     $sql = "SELECT * FROM login WHERE username = '".$username."' AND password = '".$password."' LIMIT 1";
-    
+
     $sel = $pdo->prepare($sql);
     $sel->execute();
     //$result = $sel->fetchAll();
@@ -35,14 +35,14 @@ if(isset($_POST['Submit'])) {
   <link rel="stylesheet" href="stylesheets/login.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
+
 <body style="background-image: url(images/login.jpg);">
 
 
 <div id="header" class="container-fluid" style="background-color: #F8F8FF !important;">
   <div class="container-fluid text-center">
-   
-    
+
+
   </div>
   <button id="back-button" onclick="window.location.href='index.php'" type="button" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> BACK
@@ -57,7 +57,7 @@ if(isset($_POST['Submit'])) {
   <div class="thumbnail text-center">
     <form action="login.php" method="POST">
       <div class="form-group">
-        <label for="exampleInputEmail1">Username</label>
+        <label for="exampleInputEmail1">Email</label>
         <input type="email" id="username" name="username" class="form-control" placeholder="Enter email">
       </div>
       <div class="form-group">
