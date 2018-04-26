@@ -11,7 +11,8 @@
                   <a href="landing.php">Home</a>
                    <a href="buy.php">Buy</a>
                   <a href="sell.php">Sell</a>
-                  <a href="about_us.html">About Us</a>
+                  <a href="checkout.php">Checkout</a>
+                  <a href="about_us.php">About Us</a>
 
             </div>
 
