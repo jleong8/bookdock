@@ -25,7 +25,7 @@ session_start();
 <?php
 
     $sql = "SELECT * FROM `books` WHERE `sold` != 1 AND `buyer_id` = '".$_SESSION['uid']."' ";
-    echo $sql;
+    //echo $sql;
     $sel = $pdo->prepare($sql);
     $sel->execute();
     $result = $sel->fetchAll();
