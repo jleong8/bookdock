@@ -49,9 +49,9 @@ function get($url) {
 }
 
 ?>
+<input type="submit" id="checkout" value="Checkout">
 
 <div class="ui four cards">
-<input type="submit" id="checkout" value="Checkout">
 <?php
 foreach($result as $row) {
 ?>
