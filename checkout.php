@@ -22,6 +22,8 @@ session_start();
     }
     #checkout {
       position: fixed;
+      float: right;
+      margin-bottom: 2px;
     }
 </style>
 
