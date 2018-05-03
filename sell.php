@@ -19,7 +19,7 @@ if(isset($_POST['submit'])) {
     $price = $_POST['price'];
     $uniq = substr(uniqid(),0,6);
 
-    $sql = "INSERT INTO `books` (`title`, `author`, `year`, `price`, `book_id`) VALUES ('".$_POST['title']."','".$_POST['author']."','".$_POST['year']."', '".$_POST['price']"', '".$uniq."')";
+    $sql = "INSERT INTO `books` (`title`, `author`, `year`, `price`, `book_id`) VALUES ('".$_POST['title']."','".$_POST['author']."','".$_POST['year']."', '".$_POST['price']."', '".$uniq."')";
 
     $sel = $pdo->prepare($sql);
     $sel->execute();
