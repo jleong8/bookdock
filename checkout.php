@@ -5,7 +5,7 @@ session_start();
 ?>
 <?php
 
-    $sql = "SELECT * FROM `books` WHERE `sold` != 0 AND `buyer_id` = '".$_SESSION['uid']."' ";
+    $sql = "SELECT * FROM `books` WHERE `sold` != 1 AND `buyer_id` = '".$_SESSION['uid']."' ";
     //echo $sql;
     $sel = $pdo->prepare($sql);
     $sel->execute();
