@@ -16,9 +16,10 @@ if(isset($_POST['submit'])) {
     $title = $_POST['title'];
     $author = $_POST['author'];
     $year = $_POST['year'];
+    $price = $_POST['price'];
     $uniq = substr(uniqid(),0,6);
 
-    $sql = "INSERT INTO `books` (`title`, `author`, `year`, `book_id`) VALUES ('".$_POST['title']."','".$_POST['author']."','".$_POST['year']."', '".$uniq."')";
+    $sql = "INSERT INTO `books` (`title`, `author`, `year`, `price`, `book_id`) VALUES ('".$_POST['title']."','".$_POST['author']."','".$_POST['year']."', '".$_POST['price']"', '".$uniq."')";
 
     $sel = $pdo->prepare($sql);
     $sel->execute();
@@ -41,6 +42,11 @@ if(isset($_POST['submit'])) {
     <label>Year</label>
     <input type="text" name="year" placeholder="Year">
   </div>
+</div>
+  <div class="field">
+  <label>Price</label>
+  <input type="text" name="price" placeholder="$">
+</div>
 
   <button class="ui button" name="submit" id="submit" type="submit">Submit</button>
 </form>
