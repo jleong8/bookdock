@@ -3,18 +3,31 @@
 <?php
 session_start();
 ?>
-<?
+<?php
 
     $sql = "SELECT * FROM `books` WHERE `sold` != 0 AND `buyer_id` = '".$_SESSION['uid']."' ";
-    echo $sql;
+    //echo $sql;
     $sel = $pdo->prepare($sql);
     $sel->execute();
     $result = $sel->fetchAll();
 
 ?>
 
-<div class="ui four cards">
 <?
+
+function get($url) {
+  $curl = curl_init();
+  curl_setopt($curl, CURLOPT_URL, $url);
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  $output = curl_exec($curl);
+  curl_close($curl);
+  return $output;
+}
+
+?>
+
+<div class="ui four cards">
+<?php
 foreach($result as $row) {
 ?>
 <form action="checkout.php?action=add&id=<? echo $row['book_id']?>" method="POST">
