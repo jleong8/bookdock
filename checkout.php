@@ -50,7 +50,7 @@ function get($url) {
 
 ?>
 
-<input type="submit" name="checkout" value="Checkout">
+<input type="submit" id="checkout" value="Checkout">
 
 <div class="ui four cards">
 <?php
