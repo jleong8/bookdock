@@ -21,7 +21,6 @@ session_start();
       color: red;
     }
     input[type=submit] {
-      position: fixed;
       float: right;
       margin-bottom: 2px;
     }
