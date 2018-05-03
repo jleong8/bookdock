@@ -11,6 +11,8 @@
 <?php
 
 if(isset($_POST['Submit'])) {
+
+    session_start();
     $username = $_POST['username'];
     $password = $_POST['password'];
 
