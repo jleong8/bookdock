@@ -42,10 +42,10 @@ if(isset($_POST['submit'])) {
     <label>Year</label>
     <input type="text" name="year" placeholder="Year">
   </div>
-</div>
   <div class="field">
   <label>Price</label>
   <input type="text" name="price" placeholder="$">
+</div>
 </div>
 
   <button class="ui button" name="submit" id="submit" type="submit">Submit</button>
