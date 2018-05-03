@@ -25,7 +25,7 @@ if(isset($book_id)) {
   $sel->execute();
   $row = $sel->fetch(PDO::FETCH_ASSOC);
   //echo $book_id;
-  $sql = "UPDATE `books` SET `buyer_id` = '".$buyer_id."' WHERE `book_id` = '".$row['book_id']"'";
+  $sql = "UPDATE `books` SET `buyer_id` = '".$buyer_id."' WHERE `book_id` = '".$row['book_id']."'";
   $sel = $pdo->prepare($sql);
   $sel->execute();
   echo "<script type='text/javascript'>  window.location='landing.php?book_id=".$book_id."'; </script>";
