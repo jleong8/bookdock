@@ -17,13 +17,13 @@ if(isset($_POST['Submit'])) {
     $password = $_POST['password'];
 
     $sql = "SELECT * FROM login WHERE username = '".$username."' AND password = '".$password."' LIMIT 1";
-    $_SESSION['uid'] = $username;
 
     $sel = $pdo->prepare($sql);
     $sel->execute();
     //$result = $sel->fetchAll();
     while($res = $sel->fetch(PDO::FETCH_ASSOC)){
         $id = $res['id'];
+        $_SESSION['uid'] = $res['buyer_id'];
         echo "<script type='text/javascript'>  window.location='landing.php?id=".$id."'; </script>";
     }
 }

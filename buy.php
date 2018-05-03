@@ -24,18 +24,8 @@ session_start();
 $book_id = $_GET["id"];
 if(isset($book_id)) {
 
-  echo "<script>console.log( 'Debug Objects: " . $_SESSION['uid']  . "' );</script>";
-
-  // $sql = "SELECT * FROM `books` WHERE `book_id` = '"."'";
-  // $sel = $pdo->prepare($sql);
-  // $sel->execute();
-  // $result = $sel->fetchAll();
-  // foreach($result as $row) {
-  //   $buyer_id = $row['buyer_id'];
-  // }
-  //echo $book_id;
-  $sql = "UPDATE `books` SET `buyer_id` = '".$buyer_id."' WHERE `book_id` = '".$book_id."'";
-  echo $sql;
+  $sql = "UPDATE `books` SET `buyer_id` = '".$_SESSION['uid']."' WHERE `book_id` = '".$book_id."'";
+  //echo $sql;
   $sel = $pdo->prepare($sql);
   $sel->execute();
   //echo "<script type='text/javascript'>  window.location='landing.php?book_id=".$book_id."'; </script>";
