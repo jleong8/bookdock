@@ -3,10 +3,26 @@
 <?php
 session_start();
 ?>
+
+<style>
+    .ui.card {
+        margin-left: 20px;
+    }
+    .card .image {
+      height: 400px;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: hidden;
+    }
+    .amazon.icon {
+      float: right;
+    }
+</style>
+
 <?php
 
     $sql = "SELECT * FROM `books` WHERE `sold` != 1 AND `buyer_id` = '".$_SESSION['uid']."' ";
-    //echo $sql;
+    echo $sql;
     $sel = $pdo->prepare($sql);
     $sel->execute();
     $result = $sel->fetchAll();
@@ -56,9 +72,7 @@ foreach($result as $row) {
   </div>
   </div>
   <div class="extra content">
-  <input type="hidden" name="hidden_title" value=<? echo $row['title']; ?>>
-  <input type="hidden" name="hidden_price" value=<? echo $row['price'];?>>
-  <input type="submit" name="add_to_cart" value="Add to Cart">
+  <a href="remove.php" src="images/cross-mark.jpg"></a>
   <a href="http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=<? echo $row['title'] ?>&Go=Go"><i class="amazon icon"></i></a>
 
   </div>
