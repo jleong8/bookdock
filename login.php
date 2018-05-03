@@ -15,6 +15,7 @@ if(isset($_POST['Submit'])) {
     $password = $_POST['password'];
 
     $sql = "SELECT * FROM login WHERE username = '".$username."' AND password = '".$password."' LIMIT 1";
+    $_SESSION['uid'] = $username;
 
     $sel = $pdo->prepare($sql);
     $sel->execute();
