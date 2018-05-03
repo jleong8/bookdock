@@ -20,7 +20,7 @@ session_start();
     .delete-class {
       color: red;
     }
-    #checkout {
+    input[type=submit] {
       position: fixed;
       float: right;
       margin-bottom: 2px;
