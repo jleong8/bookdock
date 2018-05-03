@@ -5,8 +5,9 @@ session_start();
 ?>
 <?php
 
-$buyer_id = $_GET['id'];
-$sql = "UPDATE `books` SET `buyer_id` = '' WHERE `buyer_id` = '".$buyer_id."'";
+$book_id = $_GET['id'];
+
+$sql = "UPDATE `books` SET `buyer_id` = '' WHERE `book_id` = '".$book_id."'";
 //echo $sql;
 $sel = $pdo->prepare($sql);
 $sel->execute();
