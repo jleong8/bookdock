@@ -18,8 +18,9 @@ if(isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $name = $_POST['name'];
+    $uniq = substr(uniqid(),0,6);
 
-    $sql = "INSERT INTO `login` (`username`, `password`, `name`) VALUES ('".$_POST['email']."','".$_POST['password']."','".$_POST['name']."')";
+    $sql = "INSERT INTO `login` (`username`, `password`, `name`, `buyer_id`) VALUES ('".$_POST['email']."','".$_POST['password']."','".$_POST['name']."', '".$uniq."')";
 
     $sel = $pdo->prepare($sql);
     $sel->execute();
