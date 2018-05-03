@@ -46,8 +46,9 @@ if(isset($_POST['submit'])) {
   <label>Price</label>
   <input type="text" name="price" placeholder="$">
 </div>
-</div>
+
 
   <button class="ui button" name="submit" id="submit" type="submit">Submit</button>
+  </div>
 </form>
 </div>
