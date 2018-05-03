@@ -23,6 +23,7 @@ session_start();
     input[type=submit] {
       float: right;
       margin-bottom: 2px;
+      margin-right: 2px;
     }
 </style>
 
@@ -48,8 +49,9 @@ function get($url) {
 }
 
 ?>
-
+<div>
 <input type="submit" id="checkout" value="Checkout">
+</div>
 
 <div class="ui four cards">
 <?php
