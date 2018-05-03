@@ -28,7 +28,6 @@ if(isset($book_id)) {
   //echo $sql;
   $sel = $pdo->prepare($sql);
   $sel->execute();
-  //echo "<script type='text/javascript'>  window.location='landing.php?book_id=".$book_id."'; </script>";
 }
 
 
