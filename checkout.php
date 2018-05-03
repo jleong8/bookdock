@@ -17,6 +17,9 @@ session_start();
     .amazon.icon {
       float: right;
     }
+    .delete-class {
+      color: red;
+    }
 </style>
 
 <?php
@@ -72,7 +75,7 @@ foreach($result as $row) {
   </div>
   </div>
   <div class="extra content">
-  <a href="remove.php?id=<?echo row['book_id']?>"><img src="images/cross-mark.jpg"></a>
+  <a href="remove.php?id=<? echo $row['book_id']?>"><i class="minus circle icon delete-class"></i></a>
   <a href="http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=<? echo $row['title'] ?>&Go=Go"><i class="amazon icon"></i></a>
 
   </div>
