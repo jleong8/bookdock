@@ -18,7 +18,9 @@ session_start();
       float: right;
     }
     .wishlist-class {
+      float: right;
       color: yellow;
+      outline-color: black;
     }
 </style>
 
