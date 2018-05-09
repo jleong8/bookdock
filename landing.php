@@ -1,6 +1,4 @@
 <?php include 'header.php'; ?>
-<?php include('connect.php'); ?>
-
 
 <style>
     h1 {
@@ -10,7 +8,6 @@
         line-height: 1000%;
     }
 </style>
-
 
 <div class="ui column centered grid">
 <h1>Dashboard</h1>
