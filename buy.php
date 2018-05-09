@@ -100,9 +100,12 @@ foreach($result as $row) {
   <input type="submit" name="add_to_cart" value="Add to Cart">
   <a href="wishlist.php?id=<? echo $row['book_id']?>"><i class="star icon wishlist-class"></i></a>
   <?php if($row['wishlist'] == 1) {
+    echo "
+    <style>
     .wishlist-class {
       color: yellow;
     }
+    </style> ";
   }
   ?>
   <a href="http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=<? echo $row['title'] ?>&Go=Go"><i class="amazon icon"></i></a>
