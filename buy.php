@@ -100,7 +100,7 @@ foreach($result as $row) {
   <input type="text" name="hidden_price" value=<? echo $row['wishlist'];?>>
   <input type="submit" name="add_to_cart" value="Add to Cart">
   <a href="wishlist.php?id=<? echo $row['book_id']?>"><i class="star icon wishlist-class"></i></a>
-  <?php if($row['wishlist'] == 1) {
+  <?php if($row['wishlist'] = 1) {
     echo "
     <style>
     .wishlist-class {
