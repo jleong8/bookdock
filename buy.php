@@ -99,7 +99,7 @@ foreach($result as $row) {
   <input type="hidden" name="hidden_price" value=<? echo $row['price'];?>>
   <input type="text" name="hidden_price" value=<? echo $row['wishlist'];?>>
   <input type="submit" name="add_to_cart" value="Add to Cart">
-  <a href="wishlist.php?id=<? echo $row['book_id']?>"><i class="star icon wishlist-class <?php echo $row['book_id'] ?>"></i></a>
+  <a href="wishlist.php?id=<? echo $row['book_id']?>"><i class="star icon wishlist-class <?php echo $row['book_id']; ?>"></i></a>
   <?php if($row['wishlist'] = 1) {
     echo "
     <style>
