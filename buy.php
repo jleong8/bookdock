@@ -103,7 +103,7 @@ foreach($result as $row) {
   <?php if($row['wishlist'] == 1) {
     echo "
     <style>
-    .wishlist-class".$row['book_id']." {
+    .wishlist-class ".$row['book_id']." {
       color: yellow;
     }
     </style> ";
