@@ -110,7 +110,7 @@ foreach($result as $row) {
   } else {
     echo "
     <style>
-    .wishlist-class {
+    .wishlist-class-".$row['book_id']." {
       color: black;
     }
     </style> ";
