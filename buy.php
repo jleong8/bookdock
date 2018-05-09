@@ -17,9 +17,7 @@ session_start();
     .amazon.icon {
       float: right;
     }
-    .wishlist-class {
-      float: right;
-    }
+
 </style>
 
 <?
@@ -104,6 +102,7 @@ foreach($result as $row) {
     <style>
     .wishlist-class-".$row['book_id']." {
       color: yellow;
+      float: right;
     }
     </style> ";
   } else {
@@ -111,6 +110,7 @@ foreach($result as $row) {
     <style>
     .wishlist-class-".$row['book_id']." {
       color: black;
+      float: right;
     }
     </style> ";
   }
