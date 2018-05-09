@@ -19,8 +19,7 @@ session_start();
     }
     .wishlist-class {
       float: right;
-      color: yellow;
-      outline-color: black;
+      outline-color:
     }
 </style>
 
@@ -100,7 +99,7 @@ foreach($result as $row) {
   <input type="hidden" name="hidden_title" value=<? echo $row['title']; ?>>
   <input type="hidden" name="hidden_price" value=<? echo $row['price'];?>>
   <input type="submit" name="add_to_cart" value="Add to Cart">
-  <i class="star icon wishlist-class"></i>
+  <a href="wishlist.php?id=<? echo $row['book_id']?>"><i class="star icon wishlist-class"></i></a>
   <a href="http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=<? echo $row['title'] ?>&Go=Go"><i class="amazon icon"></i></a>
 
   </div>
