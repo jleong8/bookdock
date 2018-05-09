@@ -106,6 +106,13 @@ foreach($result as $row) {
       color: yellow;
     }
     </style> ";
+  } else {
+    echo "
+    <style>
+    .wishlist-class {
+      color: black;
+    }
+    </style> ";
   }
   ?>
   <a href="http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=<? echo $row['title'] ?>&Go=Go"><i class="amazon icon"></i></a>
