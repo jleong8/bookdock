@@ -13,7 +13,7 @@
 <h1>Dashboard</h1>
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
 <h1>Wishlist</h1>
-<br> 
+<br>
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
 <h1>Sold books</h1>
 <br>
