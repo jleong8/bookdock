@@ -98,7 +98,7 @@ foreach($result as $row) {
   <input type="hidden" name="hidden_title" value=<? echo $row['title']; ?>>
   <input type="hidden" name="hidden_price" value=<? echo $row['price'];?>>
   <input type="submit" name="add_to_cart" value="Add to Cart">
-  <i class="star outline icon wishlist-class"></i>
+  <i class="star icon wishlist-class"></i>
   <a href="http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=<? echo $row['title'] ?>&Go=Go"><i class="amazon icon"></i></a>
 
   </div>
