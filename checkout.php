@@ -50,16 +50,12 @@ function get($url) {
 
 ?>
 
-<form action="checkout.php?action=add&id=<? echo $row['book_id']?>" method="POST">
+<form action="checkout.php" method="POST">
   <input type="submit" id="checkout" value="Checkout">
 <div class="ui four cards">
 <?php
 foreach($result as $row) {
 ?>
-
-
-
-
   <?php
   $keyword = $row['title'] . " " . "book cover";
   //echo $keyword;
@@ -93,7 +89,7 @@ foreach($result as $row) {
   <?php
   if(isset($_POST['submit'])) {
       $sql = "UPDATE `books` SET `sold` = 1 WHERE `buyer_id` = '".$_SESSION['uid']."'";
-      //echo $sql;
+      echo $sql;
       $sel = $pdo->prepare($sql);
       $sel->execute();
     }
