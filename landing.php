@@ -103,10 +103,7 @@ function get($url) {
   <?php
    }
   ?>
-<?php else {
-  echo "<h2>No books added to wishlist. Go to Buy section and click the heart to add.</h2>";
-}
-?>
+
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
 <h1>Sold books</h1>
 <br>
