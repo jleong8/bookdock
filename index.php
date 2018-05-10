@@ -175,7 +175,7 @@
       <div class="ui icon input">
         <form action="index.php" method="POST">
         <input class="prompt" name="prompt" type="text" placeholder="Search books...">
-      <button type="submit" name="submit" style="text-align: center; padding: 8px;">
+      <button type="submit" name="submit" style="text-align: center; padding: 8px; visibility: hidden;">
         <i class="search icon"></i>
       </button>
       </form>
