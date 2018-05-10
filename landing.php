@@ -67,8 +67,6 @@ function get($url) {
 <?php
 foreach($result as $row) {
 ?>
-<form action="checkout.php?action=add&id=<? echo $row['book_id']?>" method="POST">
-
   <?php
   $keyword = $row['title'] . " " . "book cover";
   //echo $keyword;
@@ -93,13 +91,10 @@ foreach($result as $row) {
   </div>
   </div>
   <div class="extra content">
-  <a href="remove.php?id=<? echo $row['book_id']?>"><i class="minus circle icon delete-class"></i></a>
   <a href="http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=<? echo $row['title'] ?>&Go=Go"><i class="amazon icon"></i></a>
 
   </div>
   </div>
-
-  </form>
 <?
 }
 ?>
