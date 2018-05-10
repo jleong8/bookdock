@@ -46,7 +46,7 @@ function get($url) {
         margin-left: 20px;
     }
     .card .image {
-      height: 400px;
+      height: 200px;
       max-width: 100%;
       max-height: 100%;
       overflow: hidden;
