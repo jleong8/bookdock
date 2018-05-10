@@ -47,11 +47,11 @@ function get($url) {
     .ui.card {
         margin-left: 20px;
         height: 300px;
-        width: 50px;
+
     }
     .card .image {
-      max-width: 50%;
-      max-height: 50%;
+      max-width: 100%;
+      max-height: 100%;
       overflow: hidden;
     }
     h1 {
@@ -92,10 +92,6 @@ foreach($result as $row) {
   Author: <? echo $row['author']; ?>
   <p style= text-align:"center" font-size="3">Price: $<? echo $row['price']; ?></p>
   </div>
-  </div>
-  <div class="extra content">
-  <a href="http://www.amazon.com/s/?url=search-alias%3Daps&field-keywords=<? echo $row['title'] ?>&Go=Go"><i class="amazon icon"></i></a>
-
   </div>
   </div>
 <?
