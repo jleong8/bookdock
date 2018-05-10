@@ -18,7 +18,7 @@ session_start();
 
 
 
-<div align="center"><iframe width="560" height="315"  src="https://www.youtube.com/embed/watch?v=VunJjGwk5I4" frameborder="0" allowfullscreen></iframe></div>
+<div align="center"><iframe width="560" height="315"  src="https://www.youtube.com/embed/VunJjGwk5I4" frameborder="0" allowfullscreen></iframe></div>
 <h1>About Us</h1>
 <h3>Book Dock is a website that will provide UH students a platform to exchange and sell their books.</h3>
 <h3>Created by Jason Leong</h3>
