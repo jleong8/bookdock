@@ -173,7 +173,7 @@
         <h3></h3><br>
   <div class="ui fluid category search">
       <div class="ui icon input">
-        <input class="prompt" type="text" placeholder="Search books...">
+        <input class="submit" type="text" placeholder="Search books...">
         <i class="search icon"></i>
       </div>
       <div class="results"></div>
