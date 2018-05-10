@@ -66,7 +66,7 @@ function get($url) {
 <h1>Dashboard</h1>
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
 <h1>Wishlist</h1>
-<?php if($result) { ?>
+<?php if($result) {  ?>
   <div class="ui four cards">
   <?php
 
@@ -96,12 +96,14 @@ function get($url) {
     </div>
     </div>
     </div>
-  <?
+  <?php
   }
   ?>
   </div>
-<? } ?>
-<? else {
+  <?php
+   }
+  ?>
+<?php else {
   echo "<h2>No books added to wishlist. Go to Buy section and click the heart to add.</h2>";
 }
 ?>
