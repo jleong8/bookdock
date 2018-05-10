@@ -99,7 +99,7 @@ foreach($result as $row) {
 <?
 }
 ?>
-
+</div>
 
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
 <h1>Sold books</h1>
