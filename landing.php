@@ -102,7 +102,7 @@ function get($url) {
   ?>
   </div>
 <? } else { ?>
-  <h2>No books added to wishlist.</h2>
+  <h2 style="margin-left: 20px">No books added to wishlist. Go to buy section and click heart to add.</h2>
 <? } ?>
 
 
