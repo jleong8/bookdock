@@ -87,6 +87,15 @@ foreach($result as $row) {
   </div>
   </div>
 
+  <?php
+  if(isset($_POST['submit'])) {
+      $sql = "UPDATE `books` SET `sold` = 1 WHERE `buyer_id` = '".$_SESSION['uid']."'";
+      //echo $sql;
+      $sel = $pdo->prepare($sql);
+      $sel->execute();
+    }
+  ?>
+
   </form>
 
 
@@ -95,13 +104,3 @@ foreach($result as $row) {
 // echo "</div>";
 ?>
 </div>
-
-<?php
-if(isset($_POST['submit'])) {
-  foreach($result as $row) {
-    $sql = "UPDATE `books` SET `sold` = 1 WHERE `buyer_id` = '".$_SESSION['uid']."'";
-    //echo $sql;
-    $sel = $pdo->prepare($sql);
-    $sel->execute();
-  }
-?>
