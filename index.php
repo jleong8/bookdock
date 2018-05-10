@@ -174,8 +174,8 @@
   <div class="ui fluid category search">
       <div class="ui icon input">
         <form action="index.php" method="POST">
-        <input class="submit" type="text" placeholder="Search books...">
-      <button type="submit" name="submit" style="text-align: center; padding: 5px;">
+        <input class="prompt" name="prompt" type="text" placeholder="Search books...">
+      <button type="submit" name="submit" style="text-align: center; padding: 8px;">
         <i class="search icon"></i>
       </button>
       </form>
@@ -187,6 +187,23 @@
     </div>
 
 
+<?php
+
+  if(isset($_POST['submit'])) {
+    $title = $_POST['prompt'];
+
+    $sql = $sql = "SELECT * FROM `books` WHERE `title` = '".$title."' ";
+
+    $sel = $pdo->prepare($sql);
+    $sel->execute();
+    $result = $sel->fetchAll();
+  }
+
+  if($result) {
+    echo "Hello";
+  }
+
+?>
 
 
 
