@@ -89,7 +89,8 @@ foreach($result as $row) {
   <?php
   if(isset($_POST['submit'])) {
       $sql = "UPDATE `books` SET `sold` = 1 WHERE `buyer_id` = '".$_SESSION['uid']."'";
-      echo $sql;
+      $sel = $pdo->prepare($sql);
+      $sel->execute();
 
     }
   ?>
