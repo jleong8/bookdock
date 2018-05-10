@@ -2,6 +2,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <?php
+session_start();
+?>
+<?php
 
     $servername = "us-cdbr-iron-east-05.cleardb.net";
     $username = "b8f0d04ab35a31";
@@ -110,8 +113,5 @@ function get($url) {
 
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
 <h1>Sold books</h1>
-<br>
-<hr style="height:5px;border:none;color:#333;background-color:#333;" />
-<h1>Messages</h1>
 <br>
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
