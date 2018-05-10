@@ -203,12 +203,9 @@
 
     <center>Book title was found, Login in to purchase!</center>
 
-    <?
-    }
-    ?>
-  <? else { ?>
+  <?  } else { ?>
     <center>Book title not found, Login to see other books!</center>
-    <?
+  <?
   }
   ?>
 
