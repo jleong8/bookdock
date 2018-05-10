@@ -46,14 +46,13 @@ function get($url) {
 
     .ui.card {
         margin-left: 20px;
-        /* height: 300px; */
-        max-width: 50%;
-        max-height: 100%;
+        transform:scale(0.5,0.5); 
     }
     .card .image {
-      max-width: 50%;
-      max-height: 50%;
-      /* overflow: hidden; */
+      height: 300px;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: hidden;
     }
     h1 {
         margin-left: 20px;
