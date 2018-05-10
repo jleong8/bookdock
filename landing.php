@@ -13,7 +13,7 @@
 <div class="ui column centered grid">
 <h1>Dashboard</h1>
 <br>
-<hr style="height:5px;border:none;color:#333;background-color:#333;" />
+<h1>Wishlist</h1>
 <!-- <h1>Wishlist</h1>
 <br>
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
