@@ -100,10 +100,8 @@ function get($url) {
   }
   ?>
   </div>
-  <?php
-   }
-  ?>
-<?php else {
+
+<?php } else {
   echo "No books added to wishlist.";
 ?>
 
