@@ -46,9 +46,9 @@ function get($url) {
         margin-left: 20px;
     }
     .card .image {
-      height: 200px;
-      max-width: 100%;
-      max-height: 100%;
+      height: 400px;
+      max-width: 50%;
+      max-height: 50%;
       overflow: hidden;
     }
     h1 {
@@ -59,7 +59,7 @@ function get($url) {
     }
 </style>
 
-<div class="ui column centered grid">
+
 <h1>Dashboard</h1>
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
 <h1>Wishlist</h1>
@@ -107,5 +107,3 @@ foreach($result as $row) {
 <h1>Messages</h1>
 <br>
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
-
-</div>
