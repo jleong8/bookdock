@@ -101,9 +101,9 @@ function get($url) {
   }
   ?>
   </div>
-<? } else {
-  echo "Test";
-}?>
+<? } else { ?>
+  <h2>No books added to wishlist.</h2>
+<? } ?>
 
 
 
