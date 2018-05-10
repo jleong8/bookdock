@@ -206,6 +206,12 @@
     <?
     }
     ?>
+  <? else { ?>
+    <center>Book title not found, Login to see other books!</center>
+    <?
+  }
+  ?>
+
 
     <div class="ui inverted vertical footer segment">
       <div class="ui container">
