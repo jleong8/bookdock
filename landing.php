@@ -41,6 +41,16 @@ function get($url) {
 ?>
 
 <style>
+
+    .ui.card {
+        margin-left: 20px;
+    }
+    .card .image {
+      height: 400px;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: hidden;
+    }
     h1 {
         margin-left: 20px;
     }
@@ -53,7 +63,6 @@ function get($url) {
 <h1>Dashboard</h1>
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
 <h1>Wishlist</h1>
-<br>
 <div class="ui four cards">
 <?php
 foreach($result as $row) {
