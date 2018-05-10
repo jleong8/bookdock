@@ -23,7 +23,7 @@
       margin-right: 1em;
     }
 
-  
+
 
     .masthead h1.ui.header {
       margin-top: 3em;
@@ -102,16 +102,16 @@
         font-size: 1.5em;
       }
     }
-    
+
     #center {
         background-image: url("images/landing.jpg");
         background-size: cover;
     }
-    
+
     #header {
         background-color: transparent;
     }
-    
+
     #header2 {
         background-color: transparent;
         border-color: transparent;
@@ -145,33 +145,33 @@
 
 
 
- 
+
   <!-- Page Contents -->
   <div class="pusher">
     <div class="ui inverted vertical masthead center aligned segment" id="center">
 
- 
+
     <div class="ui large secondary inverted pointing menu" id="header2">
       <a class="toc item">
       <i class="sidebar icon"></i>
     </a>
 
-     
+
       <div class="right item">
-    <?php 
-    
+    <?php
+
         if(!array_key_exists('username', $_SESSION)) echo "<div class='item'><a href='login.php' class='ui button'>Login</a></div><div class='item'><a href='sign-up.php' class='ui primary button'>Sign Up</a></div>"; else echo "<div class='item'><a href='logout.php' class='ui button'>Logout</a></div>";
-        
+
     ?>
       </div>
     </div>
-  
+
       <div class="ui text container" style="animation-name: fadeInDown; animation-duration: 3s;">
         <h1 class="ui inverted header" style="color: black">
         Welcome to Book Dock!
       </h1>
         <h3></h3><br>
-<div class="ui fluid category search">
+  <div class="ui fluid category search">
       <div class="ui icon input">
         <input class="prompt" type="text" placeholder="Search books...">
         <i class="search icon"></i>
@@ -191,12 +191,12 @@
       <div class="ui container">
         <div class="ui stackable inverted divided equal height stackable grid">
           <div class="three wide column">
-            <h4 class="ui inverted header">About</h4>
+            <h4 class="ui inverted header">Developers</h4>
             <div class="ui inverted link list">
-              <a href="developers.php" class="item">Developers</a>
+              <a href="" class="item">Jason Leong</a>
             </div>
           </div>
-       
+
           <div class="seven wide column">
           </div>
         </div>
@@ -204,9 +204,9 @@
     </div>
 
   </div>
-   
 
-  
+
+
 </body>
 
 </html>
