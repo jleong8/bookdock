@@ -101,7 +101,9 @@ function get($url) {
   }
   ?>
   </div>
-<? } ?>
+<? } else {
+  echo "Test";
+}?>
 
 
 
