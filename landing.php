@@ -46,8 +46,8 @@ function get($url) {
 
     .ui.card {
         margin-left: 20px;
-        height: 200px;
-        width: 25px;
+        height: 300px;
+        width: 50px;
     }
     .card .image {
       max-width: 50%;
