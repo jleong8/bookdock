@@ -49,7 +49,7 @@ function get($url) {
 }
 
 ?>
-<input type="submit" id="checkout" value="Checkout">
+
 
 <div class="ui four cards">
 <?php
@@ -57,6 +57,8 @@ foreach($result as $row) {
 ?>
 <form action="checkout.php?action=add&id=<? echo $row['book_id']?>" method="POST">
 
+  <input type="submit" id="checkout" value="Checkout">
+  
   <?php
   $keyword = $row['title'] . " " . "book cover";
   //echo $keyword;
