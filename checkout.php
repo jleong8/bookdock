@@ -91,7 +91,7 @@ foreach($result as $row) {
       $sql = "UPDATE `books` SET `sold` = 1 WHERE `buyer_id` = '".$_SESSION['uid']."'";
       $sel = $pdo->prepare($sql);
       $sel->execute();
-
+      echo "<script type='text/javascript'>  window.location='landing.php'; </script>";
     }
   ?>
 
