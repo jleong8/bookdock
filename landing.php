@@ -96,14 +96,13 @@ function get($url) {
     </div>
     </div>
     </div>
+
   <?php
   }
   ?>
   </div>
 
-<?php } else {
-  echo "No books added to wishlist.";
-?>
+
 
 
 <hr style="height:5px;border:none;color:#333;background-color:#333;" />
