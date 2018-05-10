@@ -47,10 +47,9 @@ function get($url) {
     .ui.card {
         margin-left: 20px;
         height: 200px;
-        width: 50px;
+        width: 25px;
     }
     .card .image {
-      height: 400px;
       max-width: 50%;
       max-height: 50%;
       overflow: hidden;
