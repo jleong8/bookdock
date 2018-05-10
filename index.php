@@ -173,8 +173,12 @@
         <h3></h3><br>
   <div class="ui fluid category search">
       <div class="ui icon input">
+        <form action="index.php" method="POST">
         <input class="submit" type="text" placeholder="Search books...">
+      </form>
+      <button type="submit" name="submit">
         <i class="search icon"></i>
+      </button>
       </div>
       <div class="results"></div>
     </div>
