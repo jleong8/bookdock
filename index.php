@@ -197,17 +197,17 @@
     $sel = $pdo->prepare($sql);
     $sel->execute();
     $result = $sel->fetchAll();
-  }
 
+    if(!$result) { ?>
+      <center>Book title not found, Login to see other books!</center>
+    <? }} ?>
+
+ <?
   if($result) { ?>
 
     <center>Book title was found, Login in to purchase!</center>
 
-  <?  } else { ?>
-    <center>Book title not found, Login to see other books!</center>
-  <?
-  }
-  ?>
+  <?  }  ?>
 
 
     <div class="ui inverted vertical footer segment">
