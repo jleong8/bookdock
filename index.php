@@ -175,10 +175,10 @@
       <div class="ui icon input">
         <form action="index.php" method="POST">
         <input class="submit" type="text" placeholder="Search books...">
-      </form>
-      <button type="submit" name="submit">
+      <button type="submit" name="submit" style="text-align: center; padding: 5px;">
         <i class="search icon"></i>
       </button>
+      </form>
       </div>
       <div class="results"></div>
     </div>
