@@ -1,5 +1,8 @@
 <?php include 'header.php'; ?>
 <?php include('connect.php'); ?>
+<?php
+session_start();
+?>
 
 <style>
   h1 {

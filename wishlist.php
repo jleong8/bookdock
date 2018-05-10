@@ -1,6 +1,9 @@
 <?php include 'header.php'; ?>
 <?php include('connect.php'); ?>
 <?php
+session_start();
+?>
+<?php
 
 $book_id = $_GET['id'];
 
