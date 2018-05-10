@@ -1,4 +1,6 @@
 <?php include 'header.php'; ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <?php
 
     $servername = "us-cdbr-iron-east-05.cleardb.net";
