@@ -45,7 +45,7 @@ function get($url) {
 <style>
 
     .ui.card {
-        margin-left: 10px;
+        margin-left: -20px;
         transform:scale(0.5,0.5);
     }
     .card .image {
