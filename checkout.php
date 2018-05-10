@@ -51,7 +51,7 @@ function get($url) {
 ?>
 
 <form action="checkout.php" method="POST">
-  <input type="submit" id="checkout" value="Checkout">
+  <input type="submit" id="submit" name="submit" value="Checkout">
 <div class="ui four cards">
 <?php
 foreach($result as $row) {
