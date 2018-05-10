@@ -67,6 +67,8 @@ function get($url) {
 <?php
 foreach($result as $row) {
 ?>
+<form action="checkout.php?action=add&id=<? echo $row['book_id']?>" method="POST">
+
   <?php
   $keyword = $row['title'] . " " . "book cover";
   //echo $keyword;
@@ -96,6 +98,8 @@ foreach($result as $row) {
 
   </div>
   </div>
+
+  </form>
 <?
 }
 ?>
